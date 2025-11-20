@@ -10,6 +10,9 @@ exports.protect = async (req, res, next) => {
     req.headers.authorization.startsWith('Bearer')
   ) {
     token = req.headers.authorization.split(' ')[1];
+  } else if (req.query.token) {
+    // Support token in query parameter for preview URLs
+    token = req.query.token;
   }
 
   // Make sure token exists
