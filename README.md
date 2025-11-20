@@ -196,6 +196,17 @@ file-manager3/
 └── README.md
 ```
 
+## Security Considerations
+
+This is a demonstration application. For production use, consider:
+- Adding rate limiting middleware (e.g., express-rate-limit) to prevent abuse
+- Improving email validation regex to avoid ReDoS
+- Adding CORS configuration for specific origins
+- Using environment-specific secrets
+- Implementing file type validation beyond MIME types
+- Adding virus scanning for uploads
+- Setting up HTTPS
+
 ## License
 
 ISC
